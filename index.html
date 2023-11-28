@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Задание 1
+        // let count = prompt("Введите количество решеток (#):");
+        // let i = 0;
+
+        // while (i < count) {
+        //     document.write('#')
+        //     i++;
+        // }
+
+
+        //Задание 2 
+        // let number = prompt("Введите число:");
+        // let i = number;
+
+        // while (i >= 0) {
+        //     document.write(i);
+        //     document.write(' ');
+        //     i--;
+        // }
+
+        //Задание 3
+        // let base = prompt("Введите число:");
+        // let stage = prompt("Введите степень:");
+        // let result = 1;
+        // let i = 0;
+
+        // while (i < stage) {
+        //     result *= base;
+        //     i++;
+        // }
+
+        // alert( base + ' в степени ' + stage + ' равно ' + result);
+
+        //Задание 4
+        // let num1 = prompt("Введите первое число:");
+        // let num2 = prompt("Введите второе число:");
+        // let i = 1;
+
+        // while (i <= num1 && i <= num2) {
+        //     if (num1 % i === 0 && num2 % i === 0) {
+        //         alert('Общий делитель: ' + i);
+        //     }
+        //     i++;
+        // }
+
+        //Задание 5
+        // let number = prompt("Введите число для вычисления факториала:");
+        // let factorial = 1;
+        // let i = 1;
+
+        // while (i <= number) {
+        //     factorial *= i;
+        //     i++;
+        // }
+
+        // alert('Факториал числа ' + number + ' равен ' + factorial);
+
+
+        //DO WHILE
+
+        //Задание 1
+        // let userAnswer;
+        // do {
+        //     userAnswer = prompt("Решите пример: 2 + 2 * 2", "");
+        // } while (userAnswer != 6);
+
+        // alert("Верно!");
+
+        //Задание 2 
+        // let number = 1000;
+        // let divisions = 0;
+
+        // do {
+        //     number /= 2;
+        //     divisions++;
+        // } while (number > 50);
+
+        // alert("Полученное число: " + number);
+        // alert("Количество делений: " + divisions);
+
+        //FOR
+
+        //Задание 1
+        // var userNumber = prompt("Введите число:");
+        // userNumber = parseInt(userNumber);
+
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i % userNumber === 0) {
+        //         document.write(i);
+        //         document.write(' ');
+        //     }
+        // }
+
+        //Задание 2
+        // var minRange = prompt("Введите минимальное значение диапазона:");
+        // var maxRange = prompt("Введите максимальное значение диапазона:");
+
+        // minRange = parseInt(minRange);
+        // maxRange = parseInt(maxRange);
+
+        // for (var i = minRange; i <= maxRange; i += 4) {
+        //     document.write(i);
+        //     document.write(' ');
+        // }
+
+
+        var userNumber = prompt("Введите число:");
+        userNumber = parseInt(userNumber);
+
+        var isSimple = true;
+
+        for (var i = 2; i < userNumber; i++) {
+            if (userNumber % i === 0) {
+                isSimple = false;
+                break;
+            }
+        }
+
+        if (isSimple && userNumber > 1) {
+            alert(userNumber + " - простое число");
+        } else {
+            alert(userNumber + " - не простое число");
+        }
+
+    </script>
+</body>
+
+</html>
